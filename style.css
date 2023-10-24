@@ -5,6 +5,11 @@
     font-family: 'Red Hat Display';
 }
 
+*::selection{
+    color: crimson;
+    background-color: black;
+}
+
 html, body{
     width: 100vw;
     height: 100%;
@@ -19,7 +24,7 @@ html, body{
 
 .main .navbar{
     width: 100vw;
-    height: 10vh;
+    height: 9vh;
     position: relative;
     background-color: crimson;
     display: flex;
@@ -31,7 +36,6 @@ html, body{
 .navbar .left{
     position: absolute;
     width: fit-content;
-    /* background-color: pink; */
     left: 2vw;
     display: flex;
     align-items: center;
@@ -44,8 +48,13 @@ html, body{
     align-items: center;
     justify-content: center;
     width: fit-content;
-    /* background-color: yellowgreen; */
     gap: 2vw;
+}
+
+.navbar .center p{
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
 }
 
 .navbar .right{
@@ -53,8 +62,21 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: aqua; */
     right: 2vw;
     width: fit-content;
-    gap: 2vw;
+    gap: 1vw;
+}
+
+.navbar .right p{
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.6vh 0.8vw;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.navbar .right .signUpBtn{
+    background-color: black;
+    color: crimson;
 }
