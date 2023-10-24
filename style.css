@@ -2,9 +2,59 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Red Hat Display';
 }
 
 html, body{
     width: 100vw;
-    height: auto;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main{
+    width: 100vw;
+    height: 100%;
+    background-color: black;
+}
+
+.main .navbar{
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar .left{
+    position: absolute;
+    width: fit-content;
+    /* background-color: pink; */
+    left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.navbar .center{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    /* background-color: yellowgreen; */
+    gap: 2vw;
+}
+
+.navbar .right{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    right: 2vw;
+    width: fit-content;
+    gap: 2vw;
 }
