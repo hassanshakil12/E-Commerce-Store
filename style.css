@@ -18,7 +18,7 @@ html, body{
 
 .main{
     width: 100vw;
-    height: 100%;
+    min-height: 100vh;
     background-color: black;
 }
 
@@ -94,6 +94,7 @@ html, body{
     padding: 2vh 0;
     opacity: 0;
     transition: all ease 0.2s;
+    z-index: 10;
 }
 
 .dropdown .section{
@@ -120,89 +121,83 @@ html, body{
 }
 
 .main .content{
-    position: relative
+    position: relative;
+    height: calc(100vh - 9vh);
 }
 
-/* --------------------------------------------------------------------------------------------------------------------------------------------- */
-.slideshow-container {
-  max-width: 1000px;
+.imageSlider {
+  width: 100vw;
+  height: calc(100vh - 9vh);
   position: relative;
-  margin: auto;
   transition: all ease 0.5s;
+  background-color: rgb(105, 0, 0);
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
+.mySlides{
+  background-color: black;
+  width: 100vw;
+  height: calc(100vh - 9vh);
+  overflow: hidden;
 }
 
-/* Next & previous buttons */
+.mySlides img{
+  width: 100%;
+  object-fit: center;
+  margin-top: -30vh;
+}
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
-  padding: 16px;
+  padding: 3vh 0.8vw;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 1vw;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+.dots{
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+  margin-top: -2.5vh;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 10px;
+  width: 10px;
+  margin: 0 0.3vw;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
   background-color: #717171;
+  scale: 1.5;
+  transition:all ease 0.3s;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
 }
 
 @keyframes fade {
