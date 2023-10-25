@@ -129,8 +129,7 @@ html, body{
   width: 100vw;
   height: calc(100vh - 9vh);
   position: relative;
-  transition: all ease 0.5s;
-  background-color: rgb(105, 0, 0);
+  background-color: rgb(100, 0, 0);
 }
 
 .mySlides{
@@ -141,9 +140,9 @@ html, body{
 }
 
 .mySlides img{
-  width: 100%;
-  object-fit: center;
-  margin-top: -30vh;
+  width: 100vw;
+  height: calc(100vh - 9vh);
+  object-fit: cover;
 }
 
 .prev, .next {
@@ -186,21 +185,11 @@ html, body{
   margin: 0 0.3vw;
   background-color: #bbb;
   border-radius: 50%;
-  transition: background-color 0.6s ease;
+  transition: all ease 0.6s;
 }
 
 .active, .dot:hover {
   background-color: #717171;
   scale: 1.5;
   transition:all ease 0.3s;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 0.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
 }
