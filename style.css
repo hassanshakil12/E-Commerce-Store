@@ -20,6 +20,7 @@ html, body{
     width: 100vw;
     min-height: 100vh;
     background-color: black;
+    /* overflow: hidden; */
 }
 
 .main .navbar{
@@ -57,6 +58,17 @@ html, body{
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
+}
+
+.navbar .menuLogo{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  font-size: 40px;
+  right: 0;
+  margin-right: 2vw;
+  cursor: pointer;
 }
 
 .navbar .right{
@@ -272,4 +284,18 @@ html, body{
 
 .details h4, p{
   font-size: 1vw;
+}
+
+@media (max-width: 500px){
+  .navbar .center{
+    display: none;
+  }
+
+  .navbar .right{
+    display: none;
+  }
+
+  .navbar .menuLogo{
+    opacity: 1;
+  }
 }
