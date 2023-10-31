@@ -1,9 +1,9 @@
-let dropdown = document.querySelector('.main .dropdown');
-let shopBtn = document.querySelector('.main .navbar .center .shopBtn');
-let content = document.querySelector('.content');
 let slideIndex = 1;
 
 const dropdownMenu = () => {
+    let dropdown = document.querySelector('.main .dropdown');
+    let shopBtn = document.querySelector('.main .navbar .center .shopBtn');
+    let content = document.querySelector('.content');
     shopBtn.addEventListener('mouseover', function () {
         dropdown.style.opacity = 1;
         content.style.filter = 'blur(5px)';
@@ -14,6 +14,31 @@ const dropdownMenu = () => {
         dropdown.style.opacity = 0;
         content.style.filter = 'blur(0)';
         content.style.opacity = 1;
+    })
+}
+
+const searchFieldAnimation = () => {
+    let btn = document.querySelector('.navbar .center .searchBtn');
+    let searchInput = document.querySelector('.navbar .searchField');
+    let cont = document.querySelector('.main .content');
+    let click = 0;
+
+    btn.addEventListener('click', function(){
+        if(click==0){
+            searchInput.style.opacity = 1;
+            searchInput.style.transform = 'translateY(40vh)';
+            cont.style.filter = 'brightness(50%)';
+            cont.style.filter = 'blur(10px)';
+            click = click + 1;
+        }
+        else{
+            searchInput.style.opacity = 0;
+            searchInput.style.transform = 'translateY(-40vh)';
+            cont.style.filter = 'brightness(100%)';
+            cont.style.filter = 'blur(0)';
+            click = click - 1;
+        }
+        
     })
 }
 
@@ -46,3 +71,4 @@ const showSlides = (n) => {
 
 dropdownMenu();
 showSlides(slideIndex);
+searchFieldAnimation();

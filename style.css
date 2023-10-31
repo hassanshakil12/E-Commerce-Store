@@ -12,7 +12,7 @@
 
 html, body{
     width: 100vw;
-    height: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -20,7 +20,7 @@ html, body{
     width: 100vw;
     min-height: 100vh;
     background-color: black;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .main .navbar{
@@ -65,10 +65,34 @@ html, body{
   display: flex;
   align-items: center;
   opacity: 0;
-  font-size: 40px;
+  font-size: 35px;
   right: 0;
   margin-right: 2vw;
+  gap: 3vw;
+}
+
+.navbar .menuLogo i{
   cursor: pointer;
+  position: relative;
+}
+
+.navbar .searchField{
+  position: absolute;
+  width: auto;
+  top: -60%;
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+
+.navbar .searchField input{
+  position: relative;
+  width: 40vw;
+  height: 5vh;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  padding: 0 15px;
+  font-size: 20px;
 }
 
 .navbar .right{
@@ -206,6 +230,10 @@ html, body{
   transition:all ease 0.3s;
 }
 
+.content{
+  transition: all ease 0.3s;
+}
+
 .content .displayItems{
   width: 100vw;
   height: 100vh;
@@ -296,6 +324,11 @@ html, body{
   }
 
   .navbar .menuLogo{
+    opacity: 1;
+  }
+
+  .navbar .searchField{
+    top: auto;
     opacity: 1;
   }
 }
