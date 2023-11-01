@@ -11,14 +11,14 @@
 }
 
 html, body{
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
 }
 
 .main{
     width: 100vw;
-    min-height: 100vh;
+    height: auto;
     background-color: black;
     overflow: hidden;
 }
@@ -91,7 +91,7 @@ html, body{
   border-radius: 30px;
   outline: none;
   border: none;
-  padding: 0 15px;
+  padding: 0 25px;
   font-size: 20px;
 }
 
@@ -117,6 +117,29 @@ html, body{
 .navbar .right .signUpBtn{
     background-color: black;
     color: crimson;
+}
+
+.main .sideMenu{
+  position: absolute;
+  background-color: rgba(220, 20, 60, 0.75);
+  backdrop-filter: blur(10px);
+  height: calc(100vh - 9vh);
+  z-index: 99;
+  bottom: 0;
+  right: 0;
+  width: 50vw;
+  padding: 5vw;
+  box-shadow: 1px 1px 10px black;
+  transition: all ease 0.5s;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.sideMenu p{
+  font-size: 25px;
+  cursor: pointer;
+  width: fit-content;
+  margin-bottom: 2vh;
 }
 
 .main .dropdown{

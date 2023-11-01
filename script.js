@@ -1,5 +1,28 @@
 let slideIndex = 1;
 
+const responsiveMenuSlider = () => {
+    let menu = document.querySelector('.navbar .menuLogo .menu');
+    let slider = document.querySelector('.main .sideMenu');
+    let bg = document.querySelector('.main .content');
+    let count = 0;
+
+    menu.addEventListener('click', function(){
+        if(count == 0){
+            slider.style.transform = 'translateX(0%)';
+            slider.style.opacity = 1;
+            bg.style.filter = 'blur(7px) brightness(50%)';
+            // bg.style.filter = '';
+            count = count + 1;
+        }
+        else{
+            slider.style.transform = 'translateX(100%)';
+            slider.style.opacity = 0;
+            bg.style.filter = 'blur(0) brightness(100%)';
+            count = count - 1;
+        }
+    })
+}
+
 const dropdownMenu = () => {
     let dropdown = document.querySelector('.main .dropdown');
     let shopBtn = document.querySelector('.main .navbar .center .shopBtn');
@@ -69,6 +92,7 @@ const showSlides = (n) => {
     dots[slideIndex - 1].className += " active";
 }
 
-dropdownMenu();
+// dropdownMenu();
 showSlides(slideIndex);
 searchFieldAnimation();
+responsiveMenuSlider();
