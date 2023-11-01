@@ -127,19 +127,35 @@ html, body{
   z-index: 99;
   bottom: 0;
   right: 0;
-  width: 50vw;
   padding: 5vw;
   box-shadow: 1px 1px 10px black;
   transition: all ease 0.5s;
-  transform: translateX(100%);
   opacity: 0;
 }
 
-.sideMenu p{
+.sideMenu > p{
   font-size: 25px;
   cursor: pointer;
   width: fit-content;
   margin-bottom: 2vh;
+}
+
+.sideMenu .shopMenu{
+  background-color: rgb(220, 40, 75);
+  border-radius: 7px;
+  margin-bottom: 2vh;
+  transition: all ease 0.35s;
+  padding: 1vw 5vw;
+  display: none;
+}
+
+.shopMenu p{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.shopMenu p:not(:last-child){
+  margin-bottom: 1.5vh;
 }
 
 .main .dropdown{
