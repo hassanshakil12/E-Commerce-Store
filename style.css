@@ -13,7 +13,7 @@
 html, body{
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .main{
@@ -141,7 +141,7 @@ html, body{
 }
 
 .sideMenu .shopMenu{
-  background-color: rgb(220, 40, 75);
+  background-color: rgb(220, 40, 70);
   border-radius: 7px;
   margin-bottom: 2vh;
   transition: all ease 0.35s;
@@ -177,6 +177,7 @@ html, body{
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    position: relative;
 }
 
 .dropdown .section h4{
@@ -369,5 +370,9 @@ html, body{
   .navbar .searchField{
     top: auto;
     opacity: 1;
+  }
+  .main .dropdown{
+    display: none;
+    width: 100vw;
   }
 }

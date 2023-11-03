@@ -1,6 +1,7 @@
 let slideIndex = 1;
 let shopMenu = document.querySelector('.sideMenu .shopMenu');
 let num = 0;
+
 const responsiveShopBtn = () => {
     let resShopBtn = document.querySelector('.sideMenu .sideBarShopBtn');
 
@@ -20,6 +21,7 @@ const responsiveMenuSlider = () => {
     let menu = document.querySelector('.navbar .menuLogo .menu');
     let slider = document.querySelector('.main .sideMenu');
     let bg = document.querySelector('.main .content');
+    let menuText = document.querySelector('.sideMenu p');
     let count = 0
 
     menu.addEventListener('click', function(){
@@ -27,6 +29,7 @@ const responsiveMenuSlider = () => {
             slider.style.width = '55vw';
             slider.style.opacity = 1;
             bg.style.filter = 'blur(7px) brightness(50%)';
+            slider.style.display = 'block';
             count = count + 1;
         }
         else{
@@ -36,7 +39,8 @@ const responsiveMenuSlider = () => {
             }    
             slider.style.width = 0;
             slider.style.opacity = 0;
-            bg.style.filter = 'blur(0) brightness(100%)'; 
+            bg.style.filter = 'blur(0) brightness(100%)';
+            slider.style.display = 'none';
             count = count - 1;
         }
     })
@@ -46,6 +50,7 @@ const dropdownMenu = () => {
     let dropdown = document.querySelector('.main .dropdown');
     let shopBtn = document.querySelector('.main .navbar .center .shopBtn');
     let content = document.querySelector('.content');
+
     shopBtn.addEventListener('mouseover', function () {
         dropdown.style.opacity = 1;
         content.style.filter = 'blur(5px)';
@@ -87,6 +92,7 @@ const searchFieldAnimation = () => {
 const plusSlides = (n) => {
     showSlides(slideIndex += n);
 }
+
 const currentSlide = (n) => {
     showSlides(slideIndex = n);
 }
