@@ -1,82 +1,82 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Red Hat Display';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display";
 }
 
-*::selection{
-    color: crimson;
-    background-color: black;
+*::selection {
+  color: crimson;
+  background-color: black;
 }
 
-html, body{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.main{
-    width: 100vw;
-    height: auto;
-    background-color: black;
-    overflow: hidden;
+.main {
+  width: 100vw;
+  height: auto;
+  background-color: black;
+  overflow: hidden;
 }
 
-.main .navbar{
-    width: 100vw;
-    height: 9vh;
-    position: relative;
-    background-color: crimson;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    z-index: 99;
-}
-
-.navbar .left{
-    position: absolute;
-    width: fit-content;
-    left: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-
-.navbar .center{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: 100%;
-    gap: 2vw;
-}
-
-.navbar .center p{
-    font-size: 18px;
-    font-weight: 400;
-    cursor: pointer;
-}
-
-.navbar .menuLogo{
-  position: absolute;
+.main .navbar {
+  width: 100vw;
+  height: 9vh;
+  position: relative;
+  background-color: crimson;
   display: flex;
   align-items: center;
-  opacity: 0;
+  justify-content: center;
+  padding: 0;
+  z-index: 99;
+}
+
+.navbar .left {
+  position: absolute;
+  width: fit-content;
+  left: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.navbar .center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 100%;
+  gap: 2vw;
+}
+
+.navbar .center p {
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.navbar .menuLogo {
+  position: absolute;
   font-size: 35px;
   right: 0;
-  margin-right: 2vw;
-  gap: 3vw;
+  margin: 2vw;
+  display: none;
+  width: auto;
 }
 
-.navbar .menuLogo i{
+.navbar .menuLogo i {
   cursor: pointer;
   position: relative;
+  margin-left: 2vw;
 }
 
-.navbar .searchField{
+.navbar .searchField {
   position: absolute;
   width: auto;
   top: -60%;
@@ -84,7 +84,7 @@ html, body{
   transition: all ease 0.3s;
 }
 
-.navbar .searchField input{
+.navbar .searchField input {
   position: relative;
   width: 40vw;
   height: 5vh;
@@ -95,31 +95,31 @@ html, body{
   font-size: 20px;
 }
 
-.navbar .right{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    right: 2vw;
-    width: fit-content;
-    gap: 1vw;
+.navbar .right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  right: 2vw;
+  width: fit-content;
+  gap: 1vw;
 }
 
-.navbar .right p{
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 0.6vh 0.8vw;
-    border-radius: 3px;
-    border: 1px solid black;
+.navbar .right p {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.6vh 0.8vw;
+  border-radius: 3px;
+  border: 1px solid black;
 }
 
-.navbar .right .signUpBtn{
-    background-color: black;
-    color: crimson;
+.navbar .right .signUpBtn {
+  background-color: black;
+  color: crimson;
 }
 
-.main .sideMenu{
+.main .sideMenu {
   position: absolute;
   background-color: rgba(220, 20, 60, 0.75);
   backdrop-filter: blur(10px);
@@ -131,16 +131,17 @@ html, body{
   box-shadow: 1px 1px 10px black;
   transition: all ease 0.5s;
   opacity: 0;
+  display: none;
 }
 
-.sideMenu > p{
+.sideMenu > p {
   font-size: 25px;
   cursor: pointer;
   width: fit-content;
   margin-bottom: 2vh;
 }
 
-.sideMenu .shopMenu{
+.sideMenu .shopMenu {
   background-color: rgb(220, 40, 70);
   border-radius: 7px;
   margin-bottom: 2vh;
@@ -149,56 +150,63 @@ html, body{
   display: none;
 }
 
-.shopMenu p{
+.shopMenu p {
   font-size: 25px;
   cursor: pointer;
 }
 
-.shopMenu p:not(:last-child){
+.shopMenu p:not(:last-child) {
   margin-bottom: 1.5vh;
 }
 
-.main .dropdown{
-    width: 100vw;
-    height: 28vh;
-    background-color: rgb(111, 111, 111);
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    gap: 4vw;
-    padding: 2vh 0;
-    opacity: 0;
-    transition: all ease 0.35s;
-    z-index: 10;
+.main .dropdown {
+  width: 100vw;
+  height: 28vh;
+  background-color: rgb(111, 111, 111);
+  position: absolute;
+
+  opacity: 0;
+  transition: all ease 0.35s;
+  z-index: 10;
 }
 
-.dropdown .section{
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-    position: relative;
+.dropdown .category {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  padding: 2vh 0;
 }
 
-.dropdown .section h4{
-    font-size: 18px;
-    font-weight: 500;
+.dropdown .section {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  position: relative;
 }
 
-.dropdown .section p{
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 400;
+.dropdown .section h4 {
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.dropdown h4{
-    font-size: 18px;
-    font-weight: 400;
+.dropdown .section p {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.main .content{
-    position: relative;
-    height: calc(100vh - 9vh);
+.dropdown h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.main .content {
+  position: relative;
+  height: calc(100vh - 9vh);
 }
 
 .imageSlider {
@@ -208,20 +216,21 @@ html, body{
   background-color: rgb(100, 0, 0);
 }
 
-.mySlides{
+.mySlides {
   background-color: black;
   width: 100vw;
   height: calc(100vh - 9vh);
   overflow: hidden;
 }
 
-.mySlides img{
+.mySlides img {
   width: 100vw;
   height: calc(100vh - 9vh);
   object-fit: cover;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -240,11 +249,12 @@ html, body{
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dots{
+.dots {
   width: 100vw;
   height: fit-content;
   display: flex;
@@ -264,17 +274,18 @@ html, body{
   transition: all ease 0.6s;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #a1a1a1;
   scale: 1.5;
-  transition:all ease 0.3s;
-}
-
-.content{
   transition: all ease 0.3s;
 }
 
-.content .displayItems{
+.content {
+  transition: all ease 0.3s;
+}
+
+.content .displayItems {
   width: 100vw;
   height: 100vh;
   background-color: rgb(100, 100, 100);
@@ -282,7 +293,7 @@ html, body{
   padding: 2.5vh 0;
 }
 
-.displayItems .itemCard{
+.displayItems .itemCard {
   width: 100vw;
   height: 65vh;
   display: flex;
@@ -291,7 +302,7 @@ html, body{
   gap: 1.5vw;
 }
 
-.itemCard .card{
+.itemCard .card {
   width: 22em;
   height: 80%;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
@@ -302,7 +313,7 @@ html, body{
   cursor: pointer;
 }
 
-.card .image{
+.card .image {
   object-fit: cover;
   width: 100%;
   height: 85%;
@@ -310,7 +321,7 @@ html, body{
   scale: 1;
 }
 
-.card .image button{
+.card .image button {
   position: absolute;
   padding: 1vh 1.5vw;
   border-radius: 7px;
@@ -325,22 +336,22 @@ html, body{
   display: none;
 }
 
-.card:hover button{
+.card:hover button {
   display: block;
 }
 
-.card .image img{
+.card .image img {
   object-fit: cover;
   width: 100%;
   transition: all ease 0.3s;
 }
 
-.card:hover img{
+.card:hover img {
   filter: brightness(50%);
   scale: 1.05;
 }
 
-.card .details{
+.card .details {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -350,28 +361,42 @@ html, body{
   position: relative;
 }
 
-.details h4, p{
+.details h4,
+p {
   font-size: 1vw;
 }
 
-@media (max-width: 500px){
-  .navbar .center{
+@media (max-width: 768px) {
+  .navbar .center,
+  .navbar .right {
     display: none;
   }
 
-  .navbar .right{
+  .main .navbar .menuLogo {
+    display: block;
+    gap: 5vw;
+    width: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar .center {
     display: none;
   }
 
-  .navbar .menuLogo{
-    opacity: 1;
+  .navbar .right {
+    display: none;
   }
 
-  .navbar .searchField{
+  .navbar .menuLogo {
+    display: block;
+  }
+
+  .navbar .searchField {
     top: auto;
     opacity: 1;
   }
-  .main .dropdown{
+  .main .dropdown {
     display: none;
     width: 100vw;
   }

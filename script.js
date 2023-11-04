@@ -55,12 +55,14 @@ const dropdownMenu = () => {
         dropdown.style.opacity = 1;
         content.style.filter = 'blur(5px)';
         content.style.opacity = 0.3;
+        dropdown.style.display = 'block';
     })
 
     dropdown.addEventListener('mouseleave', function () {
         dropdown.style.opacity = 0;
         content.style.filter = 'blur(0)';
         content.style.opacity = 1;
+        dropdown.style.display = 'none';
     })
 }
 
@@ -117,7 +119,7 @@ const showSlides = (n) => {
     dots[slideIndex - 1].className += " active";
 }
 
-// dropdownMenu();
+dropdownMenu();
 showSlides(slideIndex);
 searchFieldAnimation();
 responsiveMenuSlider();
