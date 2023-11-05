@@ -79,9 +79,9 @@ body {
 .navbar .searchField {
   position: absolute;
   width: auto;
-  top: -60%;
-  opacity: 0;
   transition: all ease 0.3s;
+  top: 35vh;
+  display: none;
 }
 
 .navbar .searchField input {
@@ -93,6 +93,7 @@ body {
   border: none;
   padding: 0 25px;
   font-size: 20px;
+  opacity: 0.5;
 }
 
 .navbar .right {
@@ -371,11 +372,27 @@ p {
   .navbar .right {
     display: none;
   }
-
-  .main .navbar .menuLogo {
+  
+  .navbar .menuLogo {
     display: block;
     gap: 5vw;
     width: auto;
+  }
+
+  .navbar .searchField{
+    top: 0;
+    opacity: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .searchField input{
+    opacity: 0.8;
+  }
+
+  .main .sideMenu .shopMenu{
+    padding: 2vh;
   }
 }
 
@@ -399,5 +416,11 @@ p {
   .main .dropdown {
     display: none;
     width: 100vw;
+  }
+}
+
+@media (max-width: 375px){
+  .navbar .searchField{
+    display: none;
   }
 }
