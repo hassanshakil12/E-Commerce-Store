@@ -41,6 +41,19 @@ const responsiveMenuSlider = () => {
             count = count - 1;
         }
     })
+
+    bg.addEventListener('click', function(){
+        if(count == 1){
+            if (num == 1) {
+                shopMenu.style.display = 'none';
+                num = num - 1;
+            }
+            slider.style.opacity = 0;
+            bg.style.filter = 'blur(0) brightness(100%)';
+            slider.style.display = 'none';
+            count = count - 1;
+        }
+    })
 }
 
 const dropdownMenu = () => {
