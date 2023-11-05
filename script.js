@@ -21,12 +21,10 @@ const responsiveMenuSlider = () => {
     let menu = document.querySelector('.navbar .menuLogo .menu');
     let slider = document.querySelector('.main .sideMenu');
     let bg = document.querySelector('.main .content');
-    let menuText = document.querySelector('.sideMenu p');
     let count = 0
 
     menu.addEventListener('click', function () {
         if (count == 0) {
-            slider.style.width = '55vw';
             slider.style.opacity = 1;
             bg.style.filter = 'blur(7px) brightness(50%)';
             slider.style.display = 'block';
@@ -37,7 +35,6 @@ const responsiveMenuSlider = () => {
                 shopMenu.style.display = 'none';
                 num = num - 1;
             }
-            slider.style.width = 0;
             slider.style.opacity = 0;
             bg.style.filter = 'blur(0) brightness(100%)';
             slider.style.display = 'none';

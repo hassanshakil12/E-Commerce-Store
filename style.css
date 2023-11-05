@@ -133,6 +133,7 @@ body {
   transition: all ease 0.5s;
   opacity: 0;
   display: none;
+  width: none;
 }
 
 .sideMenu > p {
@@ -391,6 +392,10 @@ p {
     opacity: 0.8;
   }
 
+  .main .sideMenu{
+    width: 45vw;
+  }
+
   .main .sideMenu .shopMenu{
     padding: 2vh;
   }
@@ -416,6 +421,10 @@ p {
   .main .dropdown {
     display: none;
     width: 100vw;
+  }
+
+  .main .sideMenu{
+    width: 55vw;
   }
 }
 
