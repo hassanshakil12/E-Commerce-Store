@@ -234,6 +234,7 @@ body {
   backdrop-filter: blur(4px);
   top: 25vh;
   padding-left: 10vw;
+  padding-right: 10vw;
   padding-bottom: 3vh;
 }
 
@@ -245,9 +246,10 @@ body {
 
 .textContent p{
   color: white;
-  width: 42%;
+  width: 40%;
   font-size: 1.25vw;
   margin-bottom: 3vh;
+  text-align: justify;
 }
 
 .textContent button{
@@ -404,6 +406,25 @@ p {
   font-size: 1vw;
 }
 
+/* @media (max-width: 1280px){
+  .slide01 .textContent{
+    width: 100%;
+  }
+
+  .textContent h2{
+    font-size: 6.5vw;
+  }
+
+  .textContent p{
+    font-size: 1.5vw;
+    width: 50%;
+  }
+
+  .textContent button{
+    font-size: 1.5vw;
+  }
+} */
+
 @media (max-width: 768px) {
   .navbar .center,
   .navbar .right {
@@ -435,6 +456,27 @@ p {
   .main .sideMenu .shopMenu{
     padding: 2vh;
   }
+
+  .slide01 .textContent{
+    width: 100%;
+    top: 15vh;
+  }
+
+  .textContent h2{
+    font-size: 12.5vw;
+    width: 100%;
+  }
+
+  .textContent p{
+    font-size: 3vw;
+    width: 100%;
+    margin: 2vh 0;
+  }
+
+  .textContent button{
+    font-size: 3vw;
+    padding: 1.5vh 5vw;
+  }
 }
 
 @media (max-width: 500px) {
@@ -461,6 +503,22 @@ p {
 
   .main .sideMenu{
     width: 55vw;
+  }
+
+  .slide01 .textContent{
+    width: 100%;
+  }
+
+  .textContent h2{
+    font-size: 16vw;
+  }
+
+  .textContent p{
+    font-size: 4.8vw;
+  }
+
+  .textContent button{
+    font-size: 4.8vw;
   }
 }
 
