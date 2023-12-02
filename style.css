@@ -340,6 +340,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1.5vw;
+  background-color: red;
 }
 
 .itemCard .card {
@@ -364,15 +365,16 @@ body {
 .card .image button {
   position: absolute;
   padding: 1vh 1.5vw;
-  border-radius: 7px;
-  font-size: 15px;
+  border-radius: 5px;
+  font-size: 20px;
   font-weight: 600;
   background-color: white;
   border: none;
   width: fit-content;
   cursor: pointer;
+  transform: translate(-50%, -50%);
   top: 50%;
-  transform: translateX(80%);
+  left: 50%;
   display: none;
 }
 
