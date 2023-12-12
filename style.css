@@ -487,17 +487,87 @@ footer .top{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: brown;
+  background-color: crimson;
   width: 100vw;
-  height: 80%;
+  height: 85%;
+  padding: 4vw;
+}
+
+footer .top a{
+  text-decoration: none;
+  color: #a1a1a1;
+  transition: all ease 0.3s;
+
+}
+
+footer .top a:hover{
+  color: black;
+}
+
+footer .top h1{
+  font-size: 50px;
+  font-weight: 400;
+}
+
+footer .top h4{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+footer .top .center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+
+footer .top .center button{
+  padding: 1vh 2vw;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+footer .top .center .links{
+  margin-top: 3vh;
+}
+
+footer .top .center i{
+  width: 50px;
+  height: 50px;
+  padding: 0.5vw;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 25px;
+  margin: 0 0.3vw;
+  cursor: pointer;
 }
 
 footer .bottom{
   display: flex;
   flex-direction: row;
-  background-color: aquamarine;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
   width: 100vw;
-  height: 20%;
+  height: 15%;
+  color: #a1a1a1;
+}
+
+footer .bottom h4{
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1vw;
+}
+
+footer .bottom a{
+  color: crimson;
+  text-decoration: none;
 }
 
 /* @media (max-width: 1280px){
