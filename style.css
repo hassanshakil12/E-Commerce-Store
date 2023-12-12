@@ -439,6 +439,7 @@ body {
   border-radius: 5px;
   background-color: black;
   color: crimson;
+  border: black 1px solid;
   display: none;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -467,6 +468,36 @@ body {
   width: 50%;
   text-align: justify;
   cursor: default;
+}
+
+/* Footer */
+footer{
+  background-color: crimson;
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer .top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: brown;
+  width: 100vw;
+  height: 80%;
+}
+
+footer .bottom{
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+  width: 100vw;
+  height: 20%;
 }
 
 /* @media (max-width: 1280px){
