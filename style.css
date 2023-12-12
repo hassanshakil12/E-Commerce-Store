@@ -31,7 +31,7 @@ body {
 .main .navbar {
   width: 100vw;
   height: 9vh;
-  position: relative;
+  position: fixed;
   background-color: crimson;
   display: flex;
   align-items: center;
@@ -166,6 +166,7 @@ body {
 }
 
 .main .dropdown {
+  top: 9vh;
   width: 100vw;
   height: 28vh;
   background-color: rgba(111, 111, 111, 0.75);
@@ -209,21 +210,27 @@ body {
   font-weight: 400;
 }
 
+/* Content */
+
 .main .content {
   position: relative;
   height: calc(100vh - 9vh);
+  transition: all ease 0.3s;
 }
 
+/* Image Slider */
+
 .imageSlider {
+  top: 9vh;
   width: 100vw;
-  height: calc(100vh - 9vh);
+  height: calc(100vh - 11vh);
   position: relative;
 }
 
 .mySlides {
   background-color: black;
   width: 100vw;
-  height: calc(100vh - 9vh);
+  height: calc(100vh - 20vh);
   overflow: hidden;
 }
 
@@ -318,11 +325,6 @@ body {
 .dot:hover {
   background-color: #a1a1a1;
   scale: 1.5;
-  transition: all ease 0.3s;
-}
-
-/* -----------Content------------- */
-.content {
   transition: all ease 0.3s;
 }
 
