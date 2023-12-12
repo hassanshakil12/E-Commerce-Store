@@ -489,13 +489,13 @@ footer .top{
   justify-content: space-between;
   background-color: crimson;
   width: 100vw;
-  height: 85%;
+  height: 90%;
   padding: 4vw;
 }
 
 footer .top a{
   text-decoration: none;
-  color: #a1a1a1;
+  color: #fff;
   transition: all ease 0.3s;
 
 }
@@ -546,6 +546,12 @@ footer .top .center i{
   font-size: 25px;
   margin: 0 0.3vw;
   cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+footer .top .center i:hover{
+  color: crimson;
+  background-color: black;
 }
 
 footer .bottom{
@@ -555,7 +561,7 @@ footer .bottom{
   justify-content: center;
   background-color: black;
   width: 100vw;
-  height: 15%;
+  height: 10%;
   color: #a1a1a1;
 }
 
