@@ -328,6 +328,8 @@ body {
   transition: all ease 0.3s;
 }
 
+/* Display Items */
+
 .content .displayItems {
   width: 100vw;
   min-height: auto;
@@ -390,19 +392,81 @@ body {
   scale: 1.05;
 }
 
-.card .details {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  height: 25%;
-  padding: 0 2vw;
+/* About Us */
+
+.content .aboutUs{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: black;
   position: relative;
+  color: #a1a1a1;
+  padding: 10vh 2vw;
 }
 
-.details h4,
-p {
-  font-size: 1vw;
+.aboutUs h1{
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.aboutUs .details{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2vh 0;
+  font-size: 30px;
+  gap: 4vw;
+}
+
+.details .image{
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.details .image img{
+  width: 100%;
+  transition: all ease 0.3s;
+  scale: 1.1;
+  z-index: 1;
+}
+
+.details .image button{
+  position: absolute;
+  padding: 1vh 2vw;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: black;
+  color: crimson;
+  display: none;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.details .image:hover img{
+  scale: 1.05;
+  filter: brightness(50%);
+}
+
+.details .image:hover button{
+  display: block;
+}
+
+.details .image button:hover{
+  background-color: crimson;
+  border: none;
+  color: black;
+  border: black 1px solid;
+}
+
+.details p{
+  width: 50%;
+  text-align: justify;
+  cursor: default;
 }
 
 /* @media (max-width: 1280px){
